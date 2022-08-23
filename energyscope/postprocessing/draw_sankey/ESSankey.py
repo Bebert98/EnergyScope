@@ -52,7 +52,6 @@ Usage: ESSankey.py [OPTIONS]
 \t\t-n, --no-open
 \t\t\tprevent from automatically opening the generated html file in the browser.'''
 
-
 def drawSankey(path="./",outputfile='TO_REPLACE',auto_open=True):
     path = Path(path)
     if path.stem == "input2sankey":
@@ -66,7 +65,6 @@ def drawSankey(path="./",outputfile='TO_REPLACE',auto_open=True):
     fig = genSankey(flows,cat_cols=['source','target'],value_cols='realValue',title='Energy',color_col='layerColor')
     fig.write_html(str(outputfile), auto_open=auto_open)
     #fig.show()
-
 
 def genSankey(df,cat_cols=[],value_cols='',title='Sankey Diagram',color_col=[]):
     # maximum of 6 value cols -> 6 colors
@@ -134,7 +132,6 @@ def genSankey(df,cat_cols=[],value_cols='',title='Sankey Diagram',color_col=[]):
     fig = go.Figure(data=[data], layout=layout)
     return fig
 
-
 def hexToRGB(hex, alpha):
     hex = hex.lstrip('#')
     r = int(hex[0:2], 16)
@@ -145,7 +142,6 @@ def hexToRGB(hex, alpha):
         return "rgba(%d, %d, %d, %.2f)" % (r,g,b,alpha)
     else:
         return "rgba(%d, %d, %d)" % (r,g,b)
-
 
 def main(argv):
     path = Path('../')

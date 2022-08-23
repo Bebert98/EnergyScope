@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .idea/
 
@@ -8,3 +9,16 @@
 STEP_2_Energy_Model/output/
 
 energyscope.egg-info/
+=======
+energyscope/__pycache__/
+.idea/
+*.pyc
+*.log
+energyscope.egg-info/
+energyscope/misc/__pycache__/
+energyscope/preprocessing/__pycache__/
+case_studies/
+energyscope/postprocessing/__pycache__/
+energyscope/postprocessing/draw_sankey/__pycache__/
+.DS_Store
+>>>>>>> Margincapacity
